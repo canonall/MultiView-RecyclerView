@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="largeNews"
-            type="com.canonal.news.model.LargeNews" />
+            name="shortNews"
+            type="com.canonal.news.model.ShortNews" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,27 +18,27 @@
         android:padding="12dp">
 
         <ImageView
-            android:id="@+id/ivLargeNews"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@{largeNews.image}"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ivShortNews"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@{shortNews.image}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@drawable/android_large_news_icon" />
+            tools:background="@drawable/android_short_news_icon" />
 
         <TextView
-            android:id="@+id/tvTitleLargeNews"
+            android:id="@+id/tvTitleShortNews"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@{largeNews.title}"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@{shortNews.title}"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivShortNews"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivLargeNews"
-            tools:text="Large News Title" />
-
+            app:layout_constraintStart_toEndOf="@+id/ivShortNews"
+            app:layout_constraintTop_toTopOf="@id/ivShortNews"
+            tools:text="Short News Title" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

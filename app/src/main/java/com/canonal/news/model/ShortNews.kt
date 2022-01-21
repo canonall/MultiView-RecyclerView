@@ -2,8 +2,7 @@ package com.canonal.news.model
 
 import android.graphics.drawable.Drawable
 
-data class LargeNews(
-    val  title: String,
+data class ShortNews(
+    val title: String,
     val image: Drawable?
-): News(title, image)
-
+) : News(title, image)
