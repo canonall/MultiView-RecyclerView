@@ -3,49 +3,50 @@ package com.canonal.news
 import android.content.Context
 import androidx.core.content.ContextCompat
 import com.canonal.news.model.LargeNews
+import com.canonal.news.model.News
+import com.canonal.news.model.ShortNews
 
 object DummyData {
-    fun getDummyData(context: Context): List<LargeNews>{
-        val largeNews = arrayListOf<LargeNews>()
+    fun getDummyData(context: Context): List<News>{
+        val newsList = arrayListOf<News>()
 
         val largeNews1 = LargeNews(
             "Large News Title 1",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
+            ContextCompat.getDrawable(context,R.drawable.android_large_news_icon)
+        )
+        val shortNews1 = ShortNews(
+            "Short News Title 1",
+            ContextCompat.getDrawable(context,R.drawable.android_short_news_icon)
+        )
+        val shortNews2 = ShortNews(
+            "Short News Title 2",
+            ContextCompat.getDrawable(context,R.drawable.android_short_news_icon)
         )
         val largeNews2 = LargeNews(
             "Large News Title 2",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
+            ContextCompat.getDrawable(context,R.drawable.android_large_news_icon)
+        )
+        val shortNews3= ShortNews(
+            "Short News Title 3",
+            ContextCompat.getDrawable(context,R.drawable.android_short_news_icon)
+        )
+        val shortNews4 = ShortNews(
+            "Short News Title 4",
+            ContextCompat.getDrawable(context,R.drawable.android_short_news_icon)
         )
         val largeNews3 = LargeNews(
             "Large News Title 3",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
-        )
-        val largeNews4 = LargeNews(
-            "Large News Title 4",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
-        )
-        val largeNews5= LargeNews(
-            "Large News Title 5",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
-        )
-        val largeNews6 = LargeNews(
-            "Large News Title 6",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
-        )
-        val largeNews7 = LargeNews(
-            "Large News Title 7",
-            ContextCompat.getDrawable(context,R.drawable.android_icon)
+            ContextCompat.getDrawable(context,R.drawable.android_large_news_icon)
         )
 
-        largeNews.add(largeNews1)
-        largeNews.add(largeNews2)
-        largeNews.add(largeNews3)
-        largeNews.add(largeNews4)
-        largeNews.add(largeNews5)
-        largeNews.add(largeNews6)
-        largeNews.add(largeNews7)
-
-        return largeNews
+        newsList.add(largeNews1)
+        newsList.add(shortNews1)
+        newsList.add(shortNews2)
+        newsList.add(largeNews2)
+        newsList.add(shortNews3)
+        newsList.add(shortNews4)
+        newsList.add(largeNews3)
+        return newsList
 
     }
 }
