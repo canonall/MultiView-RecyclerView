@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         val recyclerViewNews = binding.rvNews
-        val largeNews = DummyData.getDummyData(this)
-        val newsAdapter = NewsAdapter(largeNews)
+        val newsList = DummyData.getDummyData(this)
+        val newsAdapter = NewsAdapter(newsList)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         recyclerViewNews.adapter = newsAdapter
