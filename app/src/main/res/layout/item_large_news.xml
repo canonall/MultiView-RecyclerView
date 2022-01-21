@@ -25,11 +25,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@drawable/android_icon" />
+            tools:background="@drawable/android_large_news_icon" />
 
         <TextView
             android:id="@+id/tvTitleLargeNews"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{largeNews.title}"
