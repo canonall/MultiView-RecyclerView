@@ -3,7 +3,9 @@ package com.canonal.news.model
 import android.graphics.drawable.Drawable
 
 data class LargeNews(
-    val  title: String,
-    val image: Drawable?
-): News(title, image)
+    override val title: String,
+    override val image: Drawable?,
+    val description: String
+) : News()
+
 

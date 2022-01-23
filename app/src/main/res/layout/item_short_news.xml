@@ -29,16 +29,27 @@
         <TextView
             android:id="@+id/tvTitleShortNews"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:gravity="center_vertical"
             android:text="@{shortNews.title}"
             android:textColor="@color/black"
             android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="@+id/ivShortNews"
+            app:layout_constraintBottom_toBottomOf="@id/ivShortNews"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivShortNews"
             app:layout_constraintTop_toTopOf="@id/ivShortNews"
             tools:text="Short News Title" />
+
+        <TextView
+            android:id="@+id/tvDateShortNews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{shortNews.date}"
+            app:layout_constraintBottom_toBottomOf="@id/ivShortNews"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitleShortNews"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleShortNews"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleShortNews"
+            tools:text="@tools:sample/date/mmddyy" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

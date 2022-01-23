@@ -40,5 +40,16 @@
             app:layout_constraintTop_toBottomOf="@+id/ivLargeNews"
             tools:text="Large News Title" />
 
+        <TextView
+            android:id="@+id/tvDescriptionLargeNews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{largeNews.description}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleLargeNews"
+            app:layout_constraintStart_toStartOf="@id/tvTitleLargeNews"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleLargeNews"
+            tools:text="Random description" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
